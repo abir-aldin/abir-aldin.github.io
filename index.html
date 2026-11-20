@@ -168,6 +168,97 @@
       .video-box{padding:22px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  
+/* ===== Premium Project Action Buttons ===== */
+
+.project-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 17px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 19px;
+
+  background: linear-gradient(
+    120deg,
+    #2563eb,
+    #6755e8,
+    #9333ea
+  );
+  background-size: 200% 200%;
+
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 13px;
+
+  box-shadow: 0 7px 18px rgba(69,86,218,0.22);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-position 0.45s ease;
+}
+
+.project-links a:hover {
+  color: #ffffff !important;
+  background-position: 100% 50%;
+  transform: translateY(-4px) scale(1.02);
+
+  box-shadow:
+    0 12px 28px rgba(85,77,210,0.35),
+    0 0 12px rgba(99,102,241,0.15);
+}
+
+.project-links a:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.project-links a:focus-visible {
+  outline: 3px solid #c9a66b;
+  outline-offset: 4px;
+}
+
+/* Remove the old separate arrow */
+.project-links .arrow {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 680px) {
+  .project-links {
+    gap: 10px;
+  }
+
+  .project-links a {
+    font-size: 13px;
+    padding: 11px 15px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .project-links a {
+    transition: none;
+  }
+
+  .project-links a:hover {
+    transform: none;
+  }
+}
+
+  
   </style>
 </head>
 <body>
